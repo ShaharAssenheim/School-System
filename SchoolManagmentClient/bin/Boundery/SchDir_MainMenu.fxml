@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.embed.swing.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="768.0" maxWidth="1366.0" minHeight="768.0" minWidth="1366.0" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SchoolDirectorController">
+   <children>
+      <Line endX="1270.0" layoutX="98.0" layoutY="44.0" startX="-100.0" />
+      <ImageView fitHeight="529.0" fitWidth="615.0" layoutX="388.0" layoutY="152.0" opacity="0.21" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/System_Background.jpg" />
+         </image>
+      </ImageView>
+      <MenuBar layoutY="45.0" prefHeight="32.0" prefWidth="1366.0">
+        <menus>
+            <Menu mnemonicParsing="false" text="Semesters">
+               <items>
+                  <MenuItem fx:id="Btn_ViewSemesterData" mnemonicParsing="false" onAction="#ViewSemester" text="View Semester Data" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Courses">
+               <items>
+                  <MenuItem fx:id="Btn_ViewCoursesData" mnemonicParsing="false" onAction="#ViewCourses" text="View Courses Data" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Students">
+               <items>
+                  <MenuItem fx:id="Btn_ViewStudentData" mnemonicParsing="false" onAction="#ChooseStudent" text="View Student Data" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Parents">
+               <items>
+                  <MenuItem fx:id="Btn_ViewParentData" mnemonicParsing="false" onAction="#ChooseParent" text="View Parent Data" />
+                  <MenuItem fx:id="Btn_TemporaryAccessBlocking" mnemonicParsing="false" onAction="#TemporaryAccessBlocking" text="Temporary Access Blocking" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Teachers">
+               <items>
+                  <MenuItem fx:id="Btn_ViewTeacherData" mnemonicParsing="false" onAction="#ChooseTeacher" text="View Teacher Data" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Requests">
+               <items>
+                  <MenuItem fx:id="Btn_ExceptionalStudentRegistration" mnemonicParsing="false" onAction="#ExceptionalStudentRegistration" text="Exceptional Student Registration" />
+                  <MenuItem fx:id="Btn_TeacherAppointing" mnemonicParsing="false" onAction="#TeacherAppointing" text="Teacher Appointing" />
+               </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Reports">
+            <items>
+                  <MenuItem fx:id="Btn_GradesReports" mnemonicParsing="false" onAction="#Reports" text="Grades Reports" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Settings">
+               <items>
+                  <MenuItem fx:id="Btn_UserInfo" mnemonicParsing="false" onAction="#UserInfo" text="User information" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <Line endY="15.0" layoutX="384.0" layoutY="14.0" startY="3.0" />
+      <Text layoutX="274.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="School Director">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Text>
+      <Button fx:id="Btn_Home" layoutX="1097.0" layoutY="3.0" mnemonicParsing="false" onAction="#ShowMainScreen" prefHeight="1.0" prefWidth="1.0" style="-fx-background-color: White;" textFill="TRANSPARENT">
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/homebutton.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="Btn_Logout" layoutX="1137.0" layoutY="7.0" maxHeight="31.0" maxWidth="67.0" minHeight="31.0" minWidth="67.0" mnemonicParsing="false" onAction="#Logout" prefHeight="31.0" prefWidth="67.0" style="-fx-background-color: transparent;" text="Logout">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Button>
+      <Line endY="15.0" layoutX="1202.0" layoutY="14.0" startY="3.0" />
+      <Text fx:id="Date" layoutX="1209.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="233.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Role:">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Text>
+      <Line endY="15.0" layoutX="225.0" layoutY="14.0" startY="3.0" />
+      <Text fx:id="UName" layoutX="95.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text layoutX="14.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="1010.0" layoutY="759.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This Program Developed By Group 1, All Rights are Reserved">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="89.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please navigate with the toolbar above">
+         <font>
+            <Font name="Arial" size="29.0" />
+         </font>
+      </Text>
+      <Text fx:id="UName2" layoutX="352.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="918.27099609375">
+         <font>
+            <Font name="Arial" size="60.0" />
+         </font>
+      </Text>
+      <Text layoutX="89.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome" wrappingWidth="257.30078125">
+         <font>
+            <Font name="Arial" size="60.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

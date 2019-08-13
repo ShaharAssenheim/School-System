@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="768.0" maxWidth="1366.0" minHeight="768.0" minWidth="1366.0" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SystemManagerController">
+   <children>
+      <Line endX="1270.0" layoutX="98.0" layoutY="44.0" startX="-100.0" />
+      <ImageView fitHeight="529.0" fitWidth="615.0" layoutX="388.0" layoutY="152.0" opacity="0.21" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/System_Background.jpg" />
+         </image>
+      </ImageView>
+      <MenuBar layoutY="45.0" prefHeight="32.0" prefWidth="1366.0">
+        <menus>
+            <Menu mnemonicParsing="false" text="Course">
+               <items>
+                  <MenuItem fx:id="Btn_NewCourse" mnemonicParsing="false" onAction="#NewCourse" text="New Course" />
+                  <MenuItem fx:id="Btn_ViewCourse" mnemonicParsing="false" onAction="#ViewCourse" text="View/Update Course" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Settings">
+               <items>
+                  <MenuItem fx:id="Btn_UserInfo" mnemonicParsing="false" onAction="#UserInfo" text="User information" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <Line endY="15.0" layoutX="395.0" layoutY="14.0" startY="3.0" />
+      <Button fx:id="Btn_Home" layoutX="1097.0" layoutY="3.0" mnemonicParsing="false" onAction="#ShowMainScreen" prefHeight="1.0" prefWidth="1.0" style="-fx-background-color: White;" textFill="TRANSPARENT">
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/homebutton.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="Btn_Logout" layoutX="1137.0" layoutY="7.0" maxHeight="31.0" maxWidth="67.0" minHeight="31.0" minWidth="67.0" mnemonicParsing="false" onAction="#Logout" prefHeight="31.0" prefWidth="67.0" style="-fx-background-color: transparent;" text="Logout">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Button>
+      <Line endY="15.0" layoutX="1202.0" layoutY="14.0" startY="3.0" />
+      <Text fx:id="Date" layoutX="1209.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="233.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Role:">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Text>
+      <Line endY="15.0" layoutX="225.0" layoutY="14.0" startY="3.0" />
+      <Text fx:id="UName" layoutX="95.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text layoutX="14.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="275.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="System Manager">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="32.0" layoutX="-2.0" layoutY="76.0" stroke="BLACK" strokeType="INSIDE" width="1370.0" />
+      <Text layoutX="20.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Settings &gt; User Info">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="529.0" layoutX="109.0" layoutY="151.0" stroke="#aeaeae" strokeType="INSIDE" width="1129.0" />
+      <TextField fx:id="Birthdate" editable="false" layoutX="893.0" layoutY="354.0" maxHeight="47.0" maxWidth="329.0" minHeight="47.0" minWidth="329.0" prefHeight="47.0" prefWidth="329.0">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="Address" editable="false" layoutX="893.0" layoutY="272.0" maxHeight="47.0" maxWidth="329.0" minHeight="47.0" minWidth="329.0" prefHeight="47.0" prefWidth="329.0">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="PhoneNumber" editable="false" layoutX="893.0" layoutY="195.0" maxHeight="47.0" maxWidth="329.0" minHeight="47.0" minWidth="329.0" prefHeight="47.0" prefWidth="329.0">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="Password" editable="false" layoutX="293.0" layoutY="512.0" maxHeight="47.0" maxWidth="329.0" minHeight="47.0" minWidth="329.0" prefHeight="47.0" prefWidth="329.0">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="RoleName" editable="false" layoutX="293.0" layoutY="433.0" maxHeight="47.0" maxWidth="329.0" minHeight="47.0" minWidth="329.0" prefHeight="47.0" prefWidth="329.0">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="LastName" editable="false" layoutX="293.0" layoutY="354.0" maxHeight="47.0" maxWidth="329.0" minHeight="47.0" minWidth="329.0" prefHeight="47.0" prefWidth="329.0">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="FirstName" editable="false" layoutX="293.0" layoutY="272.0" maxHeight="47.0" maxWidth="329.0" minHeight="47.0" minWidth="329.0" prefHeight="47.0" prefWidth="329.0">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="UserID" editable="false" layoutX="293.0" layoutY="195.0" maxHeight="47.0" maxWidth="329.0" minHeight="47.0" minWidth="329.0" prefHeight="47.0" prefWidth="329.0">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </TextField>
+      <Button fx:id="Btn_ChngPass" layoutX="471.0" layoutY="559.0" maxHeight="31.0" maxWidth="152.0" minHeight="31.0" minWidth="152.0" mnemonicParsing="false" onAction="#ChangePassword" prefHeight="31.0" prefWidth="152.0" style="-fx-background-color: transparent;" text="Change Password" underline="true">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Button>
+      <Text layoutX="653.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Birthdate:">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="653.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address:">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="653.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number:">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="118.0" layoutY="553.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="118.0" layoutY="474.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Role:">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="118.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name:">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="118.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name:">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="118.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User ID:">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="232.0" fitWidth="233.0" layoutX="1026.0" layoutY="474.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/UserInfo.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="1010.0" layoutY="759.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This Program Developed By Group 1, All Rights are Reserved">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

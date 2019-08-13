@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="768.0" maxWidth="1366.0" minHeight="768.0" minWidth="1366.0" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SchoolDirectorController">
+   <children>
+      <Line endX="1270.0" layoutX="98.0" layoutY="44.0" startX="-100.0" />
+      <ImageView fitHeight="529.0" fitWidth="615.0" layoutX="388.0" layoutY="152.0" opacity="0.21" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/System_Background.jpg" />
+         </image>
+      </ImageView>
+     <MenuBar layoutY="45.0" prefHeight="32.0" prefWidth="1366.0">
+        <menus>
+            <Menu mnemonicParsing="false" text="Semesters">
+               <items>
+                  <MenuItem fx:id="Btn_ViewSemesterData" mnemonicParsing="false" onAction="#ViewSemester" text="View Semester Data" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Courses">
+               <items>
+                  <MenuItem fx:id="Btn_ViewCoursesData" mnemonicParsing="false" onAction="#ViewCourses" text="View Courses Data" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Students">
+               <items>
+                  <MenuItem fx:id="Btn_ViewStudentData" mnemonicParsing="false" onAction="#ChooseStudent" text="View Student Data" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Parents">
+               <items>
+                  <MenuItem fx:id="Btn_ViewParentData" mnemonicParsing="false" onAction="#ChooseParent" text="View Parent Data" />
+                  <MenuItem fx:id="Btn_TemporaryAccessBlocking" mnemonicParsing="false" onAction="#TemporaryAccessBlocking" text="Temporary Access Blocking" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Teachers">
+               <items>
+                  <MenuItem fx:id="Btn_ViewTeacherData" mnemonicParsing="false" onAction="#ChooseTeacher" text="View Teacher Data" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Requests">
+               <items>
+                  <MenuItem fx:id="Btn_ExceptionalStudentRegistration" mnemonicParsing="false" onAction="#ExceptionalStudentRegistration" text="Exceptional Student Registration" />
+                  <MenuItem fx:id="Btn_TeacherAppointing" mnemonicParsing="false" onAction="#TeacherAppointing" text="Teacher Appointing" />
+               </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Reports">
+            <items>
+                  <MenuItem fx:id="Btn_GradesReports" mnemonicParsing="false" onAction="#Reports" text="Grades Reports" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Settings">
+               <items>
+                  <MenuItem fx:id="Btn_UserInfo" mnemonicParsing="false" onAction="#UserInfo" text="User information" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <Line endY="15.0" layoutX="384.0" layoutY="14.0" startY="3.0" />
+      <Text layoutX="274.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="School Director">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Text>
+      <Button fx:id="Btn_Home" layoutX="1097.0" layoutY="3.0" mnemonicParsing="false" onAction="#ShowMainScreen" prefHeight="1.0" prefWidth="1.0" style="-fx-background-color: White;" textFill="TRANSPARENT">
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/homebutton.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="Btn_Logout" layoutX="1137.0" layoutY="7.0" maxHeight="31.0" maxWidth="67.0" minHeight="31.0" minWidth="67.0" mnemonicParsing="false" onAction="#Logout" prefHeight="31.0" prefWidth="67.0" style="-fx-background-color: transparent;" text="Logout">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Button>
+      <Line endY="15.0" layoutX="1202.0" layoutY="14.0" startY="3.0" />
+      <Text fx:id="Date" layoutX="1209.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="233.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Role:">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Text>
+      <Line endY="15.0" layoutX="225.0" layoutY="14.0" startY="3.0" />
+      <Text fx:id="UName" layoutX="95.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text layoutX="14.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="32.0" layoutX="-2.0" layoutY="76.0" stroke="BLACK" strokeType="INSIDE" width="1370.0" />
+      <Text layoutX="20.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reports">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="553.0" layoutX="186.0" layoutY="143.0" stroke="BLACK" strokeType="INSIDE" width="994.0" />
+      <Text fx:id="TextSelectReport" layoutX="441.0" layoutY="457.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Report:">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Text>
+      <ChoiceBox fx:id="ChooseReport" layoutX="656.0" layoutY="421.0" maxHeight="47.0" maxWidth="300.0" minHeight="47.0" minWidth="300.0" prefHeight="47.0" prefWidth="300.0" />
+      <Button fx:id="Btn_Generate" layoutX="623.0" layoutY="584.0" maxHeight="47.0" maxWidth="120.0" minHeight="47.0" minWidth="120.0" mnemonicParsing="false" onAction="#GenerateReport" prefHeight="47.0" prefWidth="120.0" text="Generate">
+         <graphic>
+            <ImageView fitHeight="34.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/select.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Button>
+      <Text fx:id="TextTID" layoutX="477.0" layoutY="536.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Teacher ID:" visible="false">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Text>
+      <TextField fx:id="TID" layoutX="654.0" layoutY="501.0" maxHeight="47.0" maxWidth="300.0" minHeight="47.0" minWidth="300.0" prefHeight="47.0" prefWidth="300.0" promptText="Enter teacher id" visible="false">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </TextField>
+      <Text fx:id="TextChooseClass" layoutX="447.0" layoutY="536.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose Class:" visible="false">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="ChooseClass" layoutX="654.0" layoutY="501.0" maxHeight="47.0" maxWidth="300.0" minHeight="47.0" minWidth="300.0" prefHeight="47.0" prefWidth="300.0" visible="false" />
+      <Text fx:id="TextSelectSemester" layoutX="408.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Semester:">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Text>
+      <ChoiceBox fx:id="ChooseSemester" layoutX="656.0" layoutY="264.0" maxHeight="47.0" maxWidth="300.0" minHeight="47.0" minWidth="300.0" prefHeight="47.0" prefWidth="300.0" />
+      <Text fx:id="TextSelectNum" layoutX="218.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Num Of Prev Semester:">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Text>
+      <ChoiceBox fx:id="ChooseNumSem" layoutX="656.0" layoutY="343.0" maxHeight="47.0" maxWidth="300.0" minHeight="47.0" minWidth="300.0" prefHeight="47.0" prefWidth="300.0" />
+      <ImageView fitHeight="185.0" fitWidth="262.0" layoutX="26.0" layoutY="560.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/report.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="1010.0" layoutY="759.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This Program Developed By Group 1, All Rights are Reserved">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

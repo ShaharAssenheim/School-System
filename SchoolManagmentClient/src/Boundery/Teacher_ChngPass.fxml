@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="768.0" maxWidth="1366.0" minHeight="768.0" minWidth="1366.0" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TeacherController">
+   <children>
+      <Line endX="1270.0" layoutX="98.0" layoutY="44.0" startX="-100.0" />
+      <ImageView fitHeight="529.0" fitWidth="615.0" layoutX="388.0" layoutY="152.0" opacity="0.21" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/System_Background.jpg" />
+         </image>
+      </ImageView>
+      <MenuBar layoutY="45.0" prefHeight="32.0" prefWidth="1366.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Homework">
+            <items>
+              <MenuItem fx:id="Btn_NewHomework" mnemonicParsing="false" onAction="#NewHomework" text="New Homework" />
+                  <MenuItem fx:id="Btn_ViewHomework" mnemonicParsing="false" onAction="#ViewHomework" text="View/Update Homework" />
+                  <MenuItem fx:id="Btn_SubmissionsList" mnemonicParsing="false" onAction="#SubmissionsList" text="Submissions List" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Class">
+            <items>
+              <MenuItem fx:id="Btn_StudentData" mnemonicParsing="false" onAction="#StudentData" text="Student Data" />
+                  <MenuItem fx:id="Btn_StudentInAClassOrCourse" mnemonicParsing="false" onAction="#StudentInAClassOrCourse" text="Students in a Class or Course " />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Appointings">
+               <items>
+                  <MenuItem fx:id="Btn_DisplayAppointings" mnemonicParsing="false" onAction="#DisplayAppointings" text="Display Appointings" />
+               </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Settings">
+            <items>
+              <MenuItem fx:id="Btn_UserInfo" mnemonicParsing="false" onAction="#UserInfo" text="User information" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Line endY="15.0" layoutX="337.0" layoutY="14.0" startY="3.0" />
+      <Button fx:id="Btn_Home" layoutX="1097.0" layoutY="3.0" mnemonicParsing="false" onAction="#ShowMainScreen" prefHeight="1.0" prefWidth="1.0" style="-fx-background-color: White;" textFill="TRANSPARENT">
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/homebutton.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="Btn_Logout" layoutX="1137.0" layoutY="7.0" maxHeight="31.0" maxWidth="67.0" minHeight="31.0" minWidth="67.0" mnemonicParsing="false" onAction="#Logout" prefHeight="31.0" prefWidth="67.0" style="-fx-background-color: transparent;" text="Logout">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Button>
+      <Line endY="15.0" layoutX="1202.0" layoutY="14.0" startY="3.0" />
+      <Text fx:id="Date" layoutX="1209.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="233.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Role:">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Text>
+      <Line endY="15.0" layoutX="225.0" layoutY="14.0" startY="3.0" />
+      <Text fx:id="UName" layoutX="95.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text layoutX="14.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="275.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Teacher">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font></Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="32.0" layoutX="-2.0" layoutY="76.0" stroke="BLACK" strokeType="INSIDE" width="1370.0" />
+      <Text layoutX="20.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Settings &gt; User Info &gt; Change Password">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f2eff00" height="529.0" layoutX="353.0" layoutY="154.0" stroke="BLACK" strokeType="INSIDE" width="660.0" />
+      <Text layoutX="1010.0" layoutY="759.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This Program Developed By Group 1, All Rights are Reserved">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="946.0" layoutY="573.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/changepassword.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="Btn_Back" layoutX="371.0" layoutY="624.0" maxHeight="47.0" maxWidth="101.0" minHeight="47.0" minWidth="101.0" mnemonicParsing="false" onAction="#BackChangePass" prefHeight="47.0" prefWidth="101.0" text="Back">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="37.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/back%20icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="Btn_ChangePass" layoutX="614.0" layoutY="548.0" maxHeight="47.0" maxWidth="192.0" minHeight="47.0" minWidth="192.0" mnemonicParsing="false" onAction="#ChangePass" prefHeight="47.0" prefWidth="192.0" text="Change Password">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="36.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/ChangePassIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <PasswordField fx:id="ConfirmNewPass" layoutX="664.0" layoutY="454.0" maxHeight="47.0" maxWidth="329.0" minHeight="47.0" minWidth="329.0" prefHeight="47.0" prefWidth="329.0" promptText="Confirm new password">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </PasswordField>
+      <Text layoutX="387.0" layoutY="498.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm Password:">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Text>
+      <PasswordField fx:id="NewPass" layoutX="664.0" layoutY="375.0" maxHeight="47.0" maxWidth="329.0" minHeight="47.0" minWidth="329.0" prefHeight="47.0" prefWidth="329.0" promptText="Enter a new password">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </PasswordField>
+      <Text layoutX="387.0" layoutY="419.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Password:">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Text>
+      <PasswordField fx:id="CurPass" layoutX="664.0" layoutY="296.0" maxHeight="47.0" maxWidth="329.0" minHeight="47.0" minWidth="329.0" prefHeight="47.0" prefWidth="329.0" promptText="Enter current password">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </PasswordField>
+      <Text layoutX="387.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Password:">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
